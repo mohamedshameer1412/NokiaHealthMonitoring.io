@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nokia Downfall Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Initial transparent navbar */
+        .navbar {
+            transition: background-color 0.4s ease, box-shadow 0.3s ease;
+            background-color: transparent !important;
+        }
+
+        /* When scrolled */
+        .navbar.scrolled {
+            background-color: #212529 !important;
+            /* Bootstrap dark */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+
+        .hero {
+            background-image: url('assets/img/phone-cellphone-mobile-nokia.jpg');
+            /* Removed \ */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-top: 1rem;
+        }
+
+        .btn-hero {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            padding: 0.75rem 2rem;
+            border-radius: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .btn-hero {
+                font-size: 1rem;
+                padding: 0.6rem 1.5rem;
+            }
+        }
+
+        .timeline-card {
+            border-left: 5px solid #198754;
+            margin-bottom: 1.5rem;
+            background: #f8f9fa;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .timeline-year {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #198754;
+        }
+
+        .text-justify {
+            text-align: justify;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">FHM for Nokia</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#timeline">Timeline</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#data">Data Visuals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#analysis">Analysis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#predictions">Predictions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#credits">Credits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>
+                <i class="fas fa-chart-line text-success me-2"></i>
+                FINANCIAL HEALTH MONITORING FOR NOKIA CORPORATION
+            </h1>
+            <p>
+                <i class="fas fa-database text-primary me-2"></i>
+                A Data-Driven Case Study Presentation by <strong>Feroz</strong>
+            </p>
+            <a href="#abstract" class="btn btn-light btn-hero shadow">
+                <i class="fas fa-play-circle me-2"></i>
+                Start Exploring
+            </a>
+        </div>
+    </section>
+
+    <section id="abstract" class="py-5">
+        <div class="container p-2">
+            <div class="card shadow border border-3 border-success p-3">
+                <div class="card-body" style="max-width: 900px; margin: auto;">
+                    <h2 class="mb-4 text-dark fs-3">
+                        <i class="fas fa-file-alt text-success me-2"></i>
+                        Project Abstract:
+                        <span class="text-success">Financial Health Monitoring for Nokia Corporation</span>
+                    </h2>
+
+                    <p class="text-secondary text-justify lh-lg">
+                        <i class="fas fa-industry me-2 text-primary"></i>
+                        In today’s fast-paced and competitive business environment, financial resilience and
+                        adaptability are crucial for any organization’s survival and growth...
+                    </p>
+
+                    <p class="text-secondary text-justify lh-lg">
+                        <i class="fas fa-history me-2 text-warning"></i>
+                        The study delves into Nokia’s financial history...
+                    </p>
+
+                    <ul class="text-secondary lh-lg">
+                        <li><i class="fas fa-chart-line me-2 text-success"></i> Key financial patterns and
+                            vulnerabilities</li>
+                        <li><i class="fas fa-exclamation-triangle me-2 text-danger"></i> Strategic missteps that
+                            influenced its financial health over time</li>
+                    </ul>
+
+                    <p class="text-secondary text-justify lh-lg">
+                        <i class="fas fa-tools me-2 text-info"></i>
+                        Utilizing Python-based tools and machine learning techniques such as:
+                    </p>
+
+                    <ul class="text-secondary lh-lg">
+                        <li><i class="fas fa-chart-area me-2 text-muted"></i> <strong>ARIMA</strong> for revenue
+                            forecasting</li>
+                        <li><i class="fas fa-ruler-combined me-2 text-muted"></i> <strong>Linear Regression</strong> for
+                            profit margin estimation</li>
+                    </ul>
+
+                    <p class="text-secondary text-justify lh-lg">
+                        <i class="fas fa-brain me-2 text-secondary"></i>
+                        The project demonstrates how predictive analytics can aid in proactive financial
+                        decision-making...
+                    </p>
+
+                    <p class="text-secondary text-justify lh-lg mb-2">
+                        <i class="fas fa-bullseye text-success me-2"></i>
+                        The success objectives include:
+                    </p>
+
+                    <ul class="text-secondary lh-lg">
+                        <li><i class="fas fa-water me-2 text-info"></i> Evaluating Nokia’s liquidity, solvency,
+                            profitability, and operational efficiency</li>
+                        <li><i class="fas fa-shield-alt me-2 text-danger"></i> Identifying financial risks and long-term
+                            trends</li>
+                        <li><i class="fas fa-balance-scale me-2 text-primary"></i> Benchmarking Nokia’s performance
+                            against industry standards</li>
+                        <li><i class="fas fa-lightbulb me-2 text-warning"></i> Providing actionable recommendations for
+                            financial sustainability</li>
+                    </ul>
+
+                    <p class="text-secondary text-justify lh-lg mt-3">
+                        <i class="fas fa-globe me-2 text-success"></i>
+                        By bridging traditional financial evaluation with advanced analytical methods...
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container py-5" id="timeline">
+        <h2 class="text-center mb-5 fw-bold">
+            <i class="fas fa-calendar-alt me-2 text-success"></i>
+            Nokia Timeline (2009–2024)
+        </h2>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <!-- Timeline Entries -->
+            <div class="col">
+                <div class="card timeline-card p-3">
+                    <div class="timeline-year">2009</div>
+                    <div><strong>Revenue:</strong> $57.16B | <strong>Gross Profit:</strong> $18.50B</div>
+                    <p class="mb-0"><i class="fas fa-chart-line me-2 text-primary"></i> Peak revenue; dominant in mobile
+                        phones.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card timeline-card p-3">
+                    <div class="timeline-year">2010</div>
+                    <div><strong>Revenue:</strong> $56.36B | <strong>Gross Profit:</strong> $17.02B</div>
+                    <p class="mb-0"><i class="fas fa-arrow-down me-2 text-warning"></i> Beginning of decline due to
+                        smartphone competition.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card timeline-card p-3">
+                    <div class="timeline-year">2011</div>
+                    <div><strong>Revenue:</strong> $53.84B | <strong>Gross Profit:</strong> $15.77B</div>
+                    <p class="mb-0"><i class="fas fa-arrow-down me-2 text-warning"></i> Challenges from iPhone and
+                        Android continue.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card timeline-card p-3">
+                    <div class="timeline-year">2012</div>
+                    <div><strong>Revenue:</strong> $38.81B | <strong>Gross Profit:</strong> $10.79B</div>
+                    <p class="mb-0"><i class="fas fa-times me-2 text-danger"></i> Significant loss; Lumia phones
+                        underperform.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card timeline-card p-3">
+                    <div class="timeline-year">2013</div>
+                    <div><strong>Revenue:</strong> $16.88B | <strong>Gross Profit:</strong> $7.10B</div>
+                    <p class="mb-0"><i class="fas fa-exchange-alt me-2 text-info"></i> Sold handset division to
+                        Microsoft; pivot to networks.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card timeline-card p-3">
+                    <div class="timeline-year">2014</div>
+                    <div><strong>Revenue:</strong> $16.93B | <strong>Gross Profit:</strong> $7.50B</div>
+                    <p class="mb-0"><i class="fas fa-chart-bar me-2 text-success"></i> Stabilization post-handset sale.
+                    </p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card timeline-card p-3">
+                    <div class="timeline-year">2015</div>
+                    <div><strong>Revenue:</strong> $13.88B | <strong>Gross Profit:</strong> $6.06B</div>
+                    <p class="mb-0"><i class="fas fa-arrow-down me-2 text-danger"></i> Revenue decline; networks are
+                        success business.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card timeline-card p-3">
+                    <div class="timeline-year">2016</div>
+                    <div><strong>Revenue:</strong> $26.13B | <strong>Gross Profit:</strong> $9.36B</div>
+                    <p class="mb-0"><i class="fas fa-arrow-up me-2 text-primary"></i> Acquisition of Alcatel-Lucent
+                        boosts revenue.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card timeline-card p-3">
+                    <div class="timeline-year">2017</div>
+                    <div><strong>Revenue:</strong> $26.16B | <strong>Gross Profit:</strong> $10.33B</div>
+                    <p class="mb-0"><i class="fas fa-poll me-2 text-secondary"></i> Steady performance in network
+                        infrastructure.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card timeline-card p-3">
+                    <div class="timeline-year">2018</div>
+                    <div><strong>Revenue:</strong> $26.65B | <strong>Gross Profit:</strong> $9.98B</div>
+                    <p class="mb-0"><i class="fas fa-arrow-down me-2 text-warning"></i> Slight growth; challenges in 5G
+                        rollout.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card timeline-card p-3">
+                    <div class="timeline-year">2019</div>
+                    <div><strong>Revenue:</strong> $26.11B | <strong>Gross Profit:</strong> $9.33B</div>
+                    <p class="mb-0"><i class="fas fa-poll me-2 text-secondary"></i> Flat revenue; increased competition
+                        in telecom.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card timeline-card p-3">
+                    <div class="timeline-year">2020</div>
+                    <div><strong>Revenue:</strong> $24.96B | <strong>Gross Profit:</strong> $9.36B</div>
+                    <p class="mb-0"><i class="fas fa-globe-americas me-2 text-muted"></i> Impact of global economic
+                        slowdown.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card timeline-card p-3">
+                    <div class="timeline-year">2021</div>
+                    <div><strong>Revenue:</strong> $26.27B | <strong>Gross Profit:</strong> $10.45B</div>
+                    <p class="mb-0"><i class="fas fa-arrow-up me-2 text-primary"></i> Recovery with increased 5G demand.
+                    </p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card timeline-card p-3">
+                    <div class="timeline-year">2022</div>
+                    <div><strong>Revenue:</strong> $26.25B | <strong>Gross Profit:</strong> $10.77B</div>
+                    <p class="mb-0"><i class="fas fa-satellite me-2 text-info"></i> Continued growth; strong 5G
+                        infrastructure sales.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card timeline-card p-3">
+                    <div class="timeline-year">2023</div>
+                    <div><strong>Revenue:</strong> $24.09B | <strong>Gross Profit:</strong> $9.40B</div>
+                    <p class="mb-0"><i class="fas fa-arrow-down me-2 text-danger"></i> Decline due to reduced telecom
+                        investments.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card timeline-card p-3">
+                    <div class="timeline-year">2024</div>
+                    <div><strong>Revenue:</strong> $20.80B | <strong>Gross Profit:</strong> $9.59B</div>
+                    <p class="mb-0"><i class="fas fa-arrow-down me-2 text-danger"></i> Further revenue drop;
+                        cost-cutting measures implemented.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h5>
+                <i class="fas fa-arrow-down me-2 text-danger"></i>
+                Summary
+            </h5>
+            <ul>
+                <li><strong>2009–2011:</strong> <i class="fas fa-chart-line me-2 text-primary"></i> Peak performance,
+                    followed by decline due to smartphone competition.</li>
+                <li><strong>2012–2013:</strong> <i class="fas fa-times me-2 text-danger"></i> Major loss and sale of
+                    handset division.</li>
+                <li><strong>2016:</strong> <i class="fas fa-arrow-up me-2 text-success"></i> Acquisition of
+                    Alcatel-Lucent lifts revenue.</li>
+                <li><strong>2021–2022:</strong> <i class="fas fa-bolt me-2 text-warning"></i> Boost from 5G demand.</li>
+                <li><strong>2023–2024:</strong> <i class="fas fa-arrow-down me-2 text-danger"></i> Revenue dip from
+                    economic strain and lower telecom investments.</li>
+            </ul>
+            <h6 class="mt-4">
+                <i class="fas fa-book me-2 text-info"></i>
+                References:
+            </h6>
+            <ul>
+                <li><a href="https://www.macrotrends.net/stocks/charts/NOK/nokia/revenue" target="_blank">
+                        <i class="fas fa-link me-2 text-muted"></i>
+                        MacroTrends: Nokia Revenue 2010–2024</a></li>
+                <li><a href="https://www.macrotrends.net/stocks/charts/NOK/nokia/gross-profit" target="_blank">
+                        <i class="fas fa-link me-2 text-muted"></i>
+                        MacroTrends: Nokia Gross Profit 2010–2024</a></li>
+                <li><a href="https://apnews.com/article/nokia-earnings-5g-demand-2021" target="_blank">
+                        <i class="fas fa-link me-2 text-muted"></i>
+                        AP News: Nokia 4Q profit beats expectations</a></li>
+                <li><a href="https://www.wired.com/2012/04/nokia-q1-loss/" target="_blank">
+                        <i class="fas fa-link me-2 text-muted"></i>
+                        Wired: Nokia Suffers $1.7B Q1 Loss</a></li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section id="references" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-4 text-center">
+                <i class="fas fa-tv me-2 text-info"></i>
+                Recommended Videos
+            </h2>
+            <div class="row g-4">
+                <!-- Video Card 1 -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <img src="https://img.youtube.com/vi/_1t15PNb468/hqdefault.jpg" class="card-img-top"
+                            alt="The Rise and Fall of Nokia">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Nokia: The DEEP FALL of an Industry GIANT - FD Finance</h5>
+                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#video1">
+                                <i class="fas fa-play me-2"></i>Watch
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video Card 2 -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <img src="https://img.youtube.com/vi/LzR36votLos/hqdefault.jpg" class="card-img-top"
+                            alt="Nokia Evolution">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Nokia - We Were Connecting People </h5>
+                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#video2">
+                                <i class="fas fa-play me-2"></i>Watch
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video Card 3 -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <img src="https://img.youtube.com/vi/FWpTcJfXhOA/hqdefault.jpg" class="card-img-top"
+                            alt="Nokia From First to Last">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"> Fall & Rise of NOKIA</h5>
+                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#video3">
+                                <i class="fas fa-play me-2"></i>Watch
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Video Popups -->
+            <div class="modal fade" id="video1" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <iframe width="100%" height="450"
+                            src="https://www.youtube.com/embed/_1t15PNb468?si=bxmqnz0Y0X5G8b3X" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="video2" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <iframe width="100%" height="450"
+                            src="https://www.youtube.com/embed/LzR36votLos?si=6Bvb-l0PSGXVAAmS" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="video3" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <iframe width="100%" height="450"
+                            src="https://www.youtube.com/embed/FWpTcJfXhOA?si=SKLxYeLpiRdbcYng" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bootstrap Modal Script -->
+    <script>
+        const modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => {
+            modal.addEventListener('hidden.bs.modal', () => {
+                const iframe = modal.querySelector('iframe');
+                iframe.src = iframe.src;
+            });
+        });
+    </script>
+    <section class="py-5">
+        <div class="container">
+            <h2 class="mb-4 text-center">
+                <i class="fas fa-image me-2 text-info"></i>
+                Visual References
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <img src="assets/img/r2.png" class="card-img-top" style="height: 300px;" alt="Revenue Chart">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Nokia Revenue Comparison</h5>
+                            <a href="https://www.macrotrends.net/stocks/charts/NOK/nokia/revenue" target="_blank"
+                                class="btn btn-outline-success">
+                                <i class="fas fa-external-link-alt me-2"></i>View Source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <img src="assets/img/r4.png" style="height: 300px;" class="card-img-top" alt="Sales Comparison">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Smartphone Sales Per Quarter</h5>
+                            <a href="https://gs.statcounter.com/vendor-market-share/mobile-tablet/worldwide/#monthly-201208-202503"
+                                target="_blank" class="btn btn-outline-success">
+                                <i class="fas fa-external-link-alt me-2"></i>View Source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Optional Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.addEventListener("scroll", function () {
+            const navbar = document.querySelector(".navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+</body>
+
+</html>
